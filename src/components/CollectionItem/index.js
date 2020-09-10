@@ -10,7 +10,12 @@ function CollectionItem(props) {
 
   return (
     <div className="collection-item">
-      <div className="collection-item__image" style={style}></div>
+      <div className="collection-item__image-container">
+        <div
+          className="collection-item__image-container__image"
+          style={style}
+        ></div>
+      </div>
       <div className="collection-item__footer">
         <span className="collection-item__footer__name">{name}</span>
         <span className="collection-item__footer__price">{price}</span>

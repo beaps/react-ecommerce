@@ -1,0 +1,19 @@
+.collection-preview {
+  margin-bottom: 3rem;
+
+  &__title {
+    color: dodgerblue;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.preview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}

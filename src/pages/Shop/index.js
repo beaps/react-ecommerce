@@ -19,13 +19,15 @@ class Shop extends React.Component {
 
     return (
       <div className="shop">
-        {collections.map((collection) => (
-          <CollectionPreview
-            key={collection.id}
-            title={collection.title}
-            items={collection.items}
-          />
-        ))}
+        <div className="shop__collections">
+          {collections.map((collection) => (
+            <CollectionPreview
+              key={collection.id}
+              title={collection.title}
+              items={collection.items}
+            />
+          ))}
+        </div>
       </div>
     );
   }
