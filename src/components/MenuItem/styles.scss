@@ -1,18 +1,3 @@
-.home {
-  min-height: 100vh;
-  background-color: lightgray;
-  padding: 0 4rem;
-}
-
-.menu-items {
-  background-color: #bbb;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 1rem;
-  padding: 2rem 0;
-}
-
 .menu-item {
   background-color: lightgreen;
   grid-column: span 2;
