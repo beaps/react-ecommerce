@@ -1,0 +1,16 @@
+.sign-in {
+  width: 40vw;
+
+  &__title {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+  }
+
+  &__form {
+    margin-top: 3rem;
+  }
+}

@@ -10,7 +10,7 @@ function FormInput(props) {
         id={id}
         className="form-group__input"
         onChange={handleChange}
-        type="text"
+        {...otherProps}
       />
       {label ? (
         <label
