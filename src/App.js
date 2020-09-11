@@ -21,11 +21,23 @@ class App extends React.Component {
   unsubcribeFromAuth = null;
 
   componentDidMount() {
+    // Update the state if the user has signed-in or signed-out
     // auth.onAuthStateChanged() adds an observer for changes to the user's sign-in state.
     this.unsubcribeFromAuth = auth.onAuthStateChanged(async (user) => {
-      // this.setState({ currentUser: user });
-      // console.log(user);
-      await createUserProfileDocument(user);
+      if (user) {
+        const userRef = await createUserProfileDocument(user);
+        // onSnapshot() update the snapshot every time the data change (real-time updates)
+        userRef.onSnapshot((snapshot) => {
+          this.setState({
+            currentUser: {
+              id: snapshot.id,
+              ...snapshot.data()
+            }
+          });
+        });
+      } else {
+        this.setState({ currentUser: user });
+      }
     });
   }
 
