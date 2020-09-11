@@ -1,5 +1,5 @@
 .sign-in {
-  width: 40vw;
+  width: 35vw;
 
   &__title {
     font-size: 1.7rem;
@@ -12,5 +12,12 @@
 
   &__form {
     margin-top: 3rem;
+
+    &__buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
   }
 }
