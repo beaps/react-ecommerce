@@ -19,6 +19,9 @@
 }
 
 .options {
+  display: flex;
+  align-items: center;
+
   &__option {
     margin-left: 1rem;
     text-decoration: none;

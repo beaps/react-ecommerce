@@ -1,0 +1,26 @@
+.cart-icon {
+  width: 40px;
+  height: 40px;
+  color: dodgerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  top: -3px;
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  &__count {
+    font-size: 0.9rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 9px;
+  }
+}
