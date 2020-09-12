@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import './App.css';
 
@@ -8,19 +9,13 @@ import Shop from './pages/Shop';
 import SignInUp from './pages/SignInUp';
 import Header from './components/Header';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import { setCurrentUser } from './redux/user/user.actions';
 
 class App extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      currentUser: null
-    };
-  }
-
   unsubcribeFromAuth = null;
 
   componentDidMount() {
+    const { setCurrentUser } = this.props;
     // Update the state if the user has signed-in or signed-out
     // auth.onAuthStateChanged() adds an observer for changes to the user's sign-in state.
     this.unsubcribeFromAuth = auth.onAuthStateChanged(async (user) => {
@@ -28,15 +23,13 @@ class App extends React.Component {
         const userRef = await createUserProfileDocument(user);
         // onSnapshot() update the snapshot every time the data change (real-time updates)
         userRef.onSnapshot((snapshot) => {
-          this.setState({
-            currentUser: {
-              id: snapshot.id,
-              ...snapshot.data()
-            }
+          setCurrentUser({
+            id: snapshot.id,
+            ...snapshot.data()
           });
         });
       } else {
-        this.setState({ currentUser: user });
+        setCurrentUser(user);
       }
     });
   }
@@ -59,4 +52,8 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => ({
+  setCurrentUser: (user) => dispatch(setCurrentUser(user))
+});
+
+export default connect(null, mapDispatchToProps)(App);
