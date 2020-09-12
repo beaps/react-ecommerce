@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import './styles.scss';
 
@@ -39,4 +40,10 @@ function Header(props) {
   );
 }
 
-export default Header;
+// state -> root reducer
+const mapStateToProp = (state) => ({
+  currentUser: state.user.currentUser
+});
+
+// The connect() function connects a React component to a Redux store.
+export default connect(mapStateToProp)(Header);
