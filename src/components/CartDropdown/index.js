@@ -14,9 +14,15 @@ function CartDropdown(props) {
   return (
     <div className="cart-dropdown">
       <div className="cart-dropdown__items">
-        {cartItems.map((cartItem) => (
-          <CartItem key={cartItem.id} item={cartItem} />
-        ))}
+        {cartItems.length ? (
+          cartItems.map((cartItem) => (
+            <CartItem key={cartItem.id} item={cartItem} />
+          ))
+        ) : (
+          <span className="cart-dropdown__items__empty-message">
+            Your cart is empty
+          </span>
+        )}
       </div>
       <CustomButton>Go to checkout</CustomButton>
     </div>

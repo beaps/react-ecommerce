@@ -16,6 +16,12 @@
     overflow: scroll;
     display: flex;
     flex-direction: column;
+
+    &__empty-message {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 50px auto;
+    }
   }
 
   button {
