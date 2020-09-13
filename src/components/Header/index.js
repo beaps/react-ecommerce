@@ -7,6 +7,7 @@ import './styles.scss';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import { auth } from '../../firebase/firebase.utils';
 import CartIcon from '../CartIcon';
+import CartDropdown from '../CartDropdown';
 
 function Header(props) {
   const { currentUser } = props;
@@ -38,6 +39,7 @@ function Header(props) {
         )}
         <CartIcon />
       </div>
+      <CartDropdown />
     </div>
   );
 }
