@@ -10,7 +10,7 @@ import CartIcon from '../CartIcon';
 import CartDropdown from '../CartDropdown';
 
 function Header(props) {
-  const { currentUser } = props;
+  const { currentUser, hidden } = props;
 
   return (
     <div className="header">
@@ -39,14 +39,15 @@ function Header(props) {
         )}
         <CartIcon />
       </div>
-      <CartDropdown />
+      {hidden ? null : <CartDropdown />}
     </div>
   );
 }
 
 // state -> root reducer
 const mapStateToProp = (state) => ({
-  currentUser: state.user.currentUser
+  currentUser: state.user.currentUser,
+  hidden: state.cart.hidden
 });
 
 // The connect() function connects a React component to a Redux store.
