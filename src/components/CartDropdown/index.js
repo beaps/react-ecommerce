@@ -8,9 +8,10 @@ import './styles.scss';
 import CustomButton from '../CustomButton';
 import CartItem from '../CartItem';
 import { selectCartItems } from '../../redux/cart/cart.selectors';
+import { toggleCartHidden } from '../../redux/cart/cart.actions';
 
 function CartDropdown(props) {
-  const { cartItems, history } = props;
+  const { cartItems, history, dispatch } = props;
 
   return (
     <div className="cart-dropdown">
@@ -25,7 +26,12 @@ function CartDropdown(props) {
           </span>
         )}
       </div>
-      <CustomButton onClick={() => history.push('/checkout')}>
+      <CustomButton
+        onClick={() => {
+          history.push('/checkout');
+          dispatch(toggleCartHidden());
+        }}
+      >
         Go to checkout
       </CustomButton>
     </div>
