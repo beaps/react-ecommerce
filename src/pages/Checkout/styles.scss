@@ -12,5 +12,15 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid darkgrey;
+
+    &__block {
+      width: 20%;
+    }
+  }
+
+  &__total {
+    margin: 2rem 0;
+    font-size: 2rem;
+    color: dodgerblue;
   }
 }

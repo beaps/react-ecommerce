@@ -35,7 +35,7 @@ function Checkout(props) {
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <div className="checkout__total">
-        <span>TOTAL: {total}</span>
+        <span>TOTAL: €{total}</span>
       </div>
     </div>
   );
