@@ -9,6 +9,7 @@
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 
   &__items {
     height: 240px;
