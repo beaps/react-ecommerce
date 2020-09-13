@@ -6,7 +6,7 @@
   min-width: 150px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: 300ms;
+  transition: 300ms ease-out;
 
   &:hover,
   &:focus {
@@ -21,6 +21,17 @@
     &:hover,
     &:focus {
       background-color: rgb(27, 123, 219);
+      color: white;
+    }
+  }
+
+  &.inverted {
+    background-color: white;
+    color: #333;
+    border: none;
+
+    &:hover {
+      background-color: dodgerblue;
       color: white;
     }
   }

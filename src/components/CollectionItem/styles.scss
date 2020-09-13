@@ -5,6 +5,7 @@
   font-weight: 600;
   font-size: 1.2rem;
   border: 1px solid dodgerblue;
+  position: relative;
 
   &__image-container {
     width: 100%;
@@ -23,11 +24,35 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+  }
 
-    &__name {
+  &__button-container {
+    opacity: 0.7;
+    position: absolute;
+    top: 63%;
+    text-align: center;
+    width: 100%;
+    display: none;
+
+    & .custom-button {
+      width: 80%;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .collection-item__image-container__image {
+      opacity: 0.8;
     }
 
-    &__price {
+    .collection-item__button-container {
+      opacity: 0.85;
+      display: block;
+
+      &:focus,
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }
