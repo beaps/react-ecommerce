@@ -1,17 +1,28 @@
 import React from 'react';
-import CollectionItem from '../../components/CollectionItem';
+import { connect } from 'react-redux';
+
+import CollectionPreview from '../../components/CollectionPreview';
+
+import { selectCollection } from '../../redux/shop/shop.selectors';
 
 import './styles.scss';
 
 function Collection(props) {
-  const { match } = props;
-  console.log(match);
+  const { collection } = props;
 
   return (
     <div className="collection">
-      <h2>Collection PAGE</h2>
+      <CollectionPreview
+        key={collection.id}
+        title={collection.title}
+        items={collection.items}
+      />
     </div>
   );
 }
 
-export default Collection;
+const mapStateToProps = (state, ownProps) => ({
+  collection: selectCollection(ownProps.match.params.collectionId)(state)
+});
+
+export default connect(mapStateToProps)(Collection);
