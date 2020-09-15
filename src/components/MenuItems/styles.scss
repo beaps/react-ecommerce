@@ -13,3 +13,9 @@
     gap: 1rem 0;
   }
 }
+
+@media (min-width: 1441px) {
+  .menu-items {
+    gap: 1.5rem;
+  }
+}

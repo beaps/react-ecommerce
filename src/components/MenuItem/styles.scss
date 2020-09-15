@@ -59,6 +59,16 @@
   }
 
   &.large {
-    height: 300px;
+    height: 350px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .menu-item {
+    height: 450px;
+
+    &.large {
+      height: 550px;
+    }
   }
 }
