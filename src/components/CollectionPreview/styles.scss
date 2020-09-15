@@ -1,6 +1,11 @@
 .collection-preview {
   margin-bottom: 3rem;
 
+  & a {
+    text-decoration: none;
+    color: dodgerblue;
+  }
+
   &__title {
     color: dodgerblue;
     text-transform: uppercase;

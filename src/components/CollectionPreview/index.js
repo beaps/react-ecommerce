@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles.scss';
 
@@ -10,7 +11,13 @@ function CollectionPreview(props) {
 
   return (
     <div className="collection-preview">
-      <h1 className="collection-preview__title">{title}</h1>
+      <h1 className="collection-preview__title">
+        {numberItems ? (
+          <Link to={`shop/${title.toLowerCase()}`}>{title}</Link>
+        ) : (
+          title
+        )}
+      </h1>
       <div className="preview">
         {items
           .filter((item, index) => index < value)
