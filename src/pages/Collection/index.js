@@ -8,15 +8,11 @@ import { selectCollection } from '../../redux/shop/shop.selectors';
 import './styles.scss';
 
 function Collection(props) {
-  const { collection } = props;
+  const { id, title, items } = props.collection;
 
   return (
     <div className="collection">
-      <CollectionPreview
-        key={collection.id}
-        title={collection.title}
-        items={collection.items}
-      />
+      <CollectionPreview key={id} title={title} items={items} />
     </div>
   );
 }

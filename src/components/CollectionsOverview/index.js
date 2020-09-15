@@ -17,6 +17,7 @@ function CollectionsOverview(props) {
           key={collection.id}
           title={collection.title}
           items={collection.items}
+          numberItems={4}
         />
       ))}
     </div>
