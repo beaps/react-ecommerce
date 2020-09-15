@@ -48,3 +48,24 @@
     cursor: pointer;
   }
 }
+
+@media (max-width: 415px) {
+  .checkout-item {
+    display: block;
+
+    &__image-container {
+      float: left;
+      width: 40%;
+      margin-right: 0.5rem;
+    }
+
+    &__name,
+    &__quantity,
+    &__price,
+    &__quantity {
+      display: block;
+      width: 80%;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

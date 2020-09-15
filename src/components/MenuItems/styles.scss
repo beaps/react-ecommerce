@@ -3,5 +3,13 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 1rem;
-  padding-top: 2rem;
+  padding: 2rem 0;
+}
+
+@media (max-width: 767px) {
+  .menu-items {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    gap: 1rem 0;
+  }
 }

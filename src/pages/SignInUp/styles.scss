@@ -1,5 +1,11 @@
 .sign-in-up {
-  padding-top: 2rem;
+  padding: 2rem 0;
   display: flex;
   justify-content: space-around;
+}
+
+@media (max-width: 425px) {
+  .sign-in-up {
+    display: block;
+  }
 }

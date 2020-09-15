@@ -21,3 +21,25 @@
     }
   }
 }
+
+@media (max-width: 1023px) {
+  .sign-in__form__buttons button:last-child {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .sign-in {
+    width: 100%;
+  }
+
+  .sign-in__form__buttons button:last-child {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 333px) {
+  .sign-in__form__buttons button:last-child {
+    margin-top: 1rem;
+  }
+}

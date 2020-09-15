@@ -34,3 +34,9 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .options__option {
+    font-size: 1rem;
+  }
+}

@@ -37,3 +37,9 @@
     }
   }
 }
+
+@media (max-width: 425px) {
+  .custom-button {
+    min-width: 100px;
+  }
+}
