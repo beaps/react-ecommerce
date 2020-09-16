@@ -9,7 +9,6 @@ import './styles.scss';
 
 function CollectionsOverview(props) {
   const { collections } = props;
-  console.log(collections);
 
   return (
     <div className="collections-overview">
