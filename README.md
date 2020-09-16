@@ -11,16 +11,16 @@
 - Firebase
 - Stripe
 
-![](https://i.ibb.co/PMfw2CC/react-ecommerce-gif.gif)
+<img src="/assets/react-ecommerce-gif.gif">
 
 ### Responsive design
 
-![Demo responsive design](https://i.ibb.co/yVT3dJc/react-ecommerce-responsive-design-gif.gif)
+<img src="/assets/react-ecommerce-responsive-design-gif.gif" alt="Demo responsive design">
 
 ### Run the project
 
-`npm install`
-`npm run start`
+1. `npm install`
+2. `npm run start`
 
 ### Thanks
 
